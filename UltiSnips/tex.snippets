@@ -129,7 +129,7 @@ endsnippet
 snippet fig "Figure environment" bi
 \begin{figure}[${1:htpb}]
 	\centering
-	${2:\includegraphics[width=0.8\textwidth]{$3}}
+	${2:\includegraphics[width=0.5\textwidth]{$3}}
 	\caption{${4:$3}}
 	\label{fig:${5:${3/\W+/-/g}}}
 \end{figure}
@@ -239,6 +239,14 @@ snippet __ "subscript" Aw
 _{$1}$0
 endsnippet
 
+snippet Ra "Right arrow" w
+\Rightarrow
+endsnippet
+
+snippet ra "Right arrow small" w
+\rightarrow
+endsnippet
+
 snippet srt "Square Root" wi
 \sqrt{${1:${VISUAL}}}$0
 endsnippet
@@ -248,15 +256,15 @@ snippet srto "... Root" wi
 endsnippet
 
 snippet bf "Bold" wi
-\bf{${1:${VISUAL}}}$0
+\textbf{${1:${VISUAL}}}$0
 endsnippet
 
 snippet it "Italic" wi
-\it{${1:${VISUAL}}}$0
+\textit{${1:${VISUAL}}}$0
 endsnippet
 
 snippet un "Underline" wi
-\un{${1:${VISUAL}}}$0
+\textun{${1:${VISUAL}}}$0
 endsnippet
 
 snippet rm "Text" wi
