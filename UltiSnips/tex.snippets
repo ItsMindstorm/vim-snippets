@@ -492,10 +492,31 @@ snippet pac "usepackage - removes square braces if options removed" b
 \usepackage`!p snip.rv='[' if t[1] else ""`${1:options}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
 endsnippet
 
+snippet uspac "Use usual packages"
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{amsmath, amssymb}
+\usepackage{import}
+endsnippet
+
 snippet docls "Document Class" bA
 \documentclass{$1}$0
 endsnippet
 
+snippet title "Title"
+\title{$1}
+\author{$2}
+
+\begin{document}
+
+\maketitle
+
+$0
+\end{document}
+endsnippet
 
 #########
 # OTHER #
