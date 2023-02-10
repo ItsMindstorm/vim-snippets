@@ -129,7 +129,7 @@ endsnippet
 snippet fig "Figure environment" bi
 \begin{figure}[${1:Hhtpb}]
 	\centering
-	\includegraphics[width=0.5\textwidth]{$2}}
+	\includegraphics[width=0.5\textwidth]{$2}
 	\caption{${3:$2}}
 	\label{fig:${4:${2/\W+/-/g}}}
 \end{figure}
@@ -156,6 +156,7 @@ snippet subfig "Subfigure environment" bi
 	  \label{fig:${10:${8/\W+/-/g}}}
 	\end{subfigure}
 \end{figure} 
+endsnippet
 
 snippet enum "Enumerate" bi
 \begin{enumerate}
@@ -199,9 +200,21 @@ snippet table "Table environment" b
 \end{table}
 endsnippet
 
+snippet break "Pagebreak"
+\pagebreak
+endsnippet
+
 ########
 # MATH #
 ########
+
+snippet quad "Quad space"
+\quad
+endsnippet
+
+snippet tex "Text"
+\text{$1}$0
+endsnippet
 
 snippet cc "subset" w
 \subset 
@@ -449,6 +462,60 @@ endsnippet
 snippet !> "mapsto" Aw
 \mapsto 
 endsnippet
+
+##########
+# BEAMER #
+#########
+snippet present "Presentation template"
+\documentclass{beamer}
+\usetheme{${1:Boadilla}}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage[document]{ragged2e}
+\graphicspath{{images/}}
+
+\begin{document}
+  \begin{frame}
+	\title{$2}
+	\subtitle{$3}
+	\author{$4}
+	\titlepage
+  \end{frame}
+  
+  $0
+\end{document}
+endsnippet
+
+snippet frame "Beamer frame"
+  \begin{frame}
+	$0
+
+  \end{frame}
+endsnippet
+
+snippet frametitle "Add title"
+	\frametitle{$1}
+	  $0
+endsnippet
+
+snippet begcol "Beamer columns"
+	\begin{columns}
+	  $0
+
+	\end{columns}
+endsnippet
+
+snippet col "Beamer column"
+	  \column{${1:0.5}\textwidth}
+		$0
+endsnippet
+
+
+
 
 ##########
 # TABLES #
