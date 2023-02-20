@@ -495,27 +495,22 @@ snippet present "Presentation template"
 endsnippet
 
 snippet frame "Beamer frame"
-  \begin{frame}
-	$0
+\begin{frame}{$1}
+  $0
 
-  \end{frame}
-endsnippet
-
-snippet frametitle "Add title"
-	\frametitle{$1}
-	  $0
+\end{frame}
 endsnippet
 
 snippet begcol "Beamer columns"
-	\begin{columns}
-	  $0
+\begin{columns}
+  $0
 
-	\end{columns}
+\end{columns}
 endsnippet
 
 snippet col "Beamer column"
-	  \column{${1:0.5}\textwidth}
-		$0
+\column{${1:0.5}\textwidth}
+  $0
 endsnippet
 
 
