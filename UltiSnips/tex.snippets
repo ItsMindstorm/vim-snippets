@@ -208,23 +208,23 @@ endsnippet
 # MATH #
 ########
 
-snippet pr "Prime"
+snippet pr "Prime" i
 ^{\prime}
 endsnippet
 
-snippet eul "Euler"
+snippet eul "Euler" i
 \mathit {e}
 endsnippet
 
-snippet deg "Degree"
+snippet deg "Degree" i
 ^{\circ}
 endsnippet
 
-snippet quad "Quad space"
+snippet quad "Quad space" w
 \quad
 endsnippet
 
-snippet tex "Text"
+snippet tex "Text" w
 \text{$1}$0
 endsnippet
 
@@ -275,7 +275,9 @@ endsnippet
 snippet dm "Display Math" w
 \[
 	${1:${VISUAL}}
-\]$0
+\]
+\\\ 
+$0
 endsnippet
 
 snippet frac "Fraction" w
@@ -290,7 +292,7 @@ snippet ss "Super Script" i
 ^{$1}$0
 endsnippet
 
-snippet __ "subscript" Aw
+snippet sb "subscript" i
 _{$1}$0
 endsnippet
 
@@ -536,6 +538,29 @@ pre_expand "add_row(snip)"
 snippet "tr(\d+)" "Add table row of dimension ..." r
 endsnippet
 
+
+###########
+## PLOTS #
+###########
+snippet plot "Plot a graph"
+\begin{tikzpicture}
+\begin{axis}[
+  axis lines=middle,
+  xtick distance = 1,
+  ytick distance = 1,
+  xmax = 5,
+  xmin = -5,
+  ymax = 5, 
+  ymin = -5,
+  xlabel = \(x\),
+  ylabel = \(y\), 
+  ]
+  $1
+
+\end{axis}
+\end{tikzpicture}
+$0
+endsnippet
 
 ###########
 # POSTFIX #
