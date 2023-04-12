@@ -587,6 +587,27 @@ endsnippet
 # PRE-AMBLE #
 #############
 
+snippet note "Setup document for notes and etc"
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{amsmath, amssymb}
+
+\title{$1}
+\author{$2}
+
+\begin{document}
+
+\maketitle
+
+$0
+\end{document}
+endsnippet
+
+
 snippet pac "usepackage - removes square braces if options removed" b
 \usepackage`!p snip.rv='[' if t[1] else ""`${1:options}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
 endsnippet
