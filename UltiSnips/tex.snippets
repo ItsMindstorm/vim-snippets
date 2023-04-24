@@ -159,7 +159,7 @@ snippet subfig "Subfigure environment" bi
 endsnippet
 
 snippet enum "Enumerate" bi
-\begin{enumerate}
+\begin{enumerate}[$1]
 	\item ${0:${VISUAL}}
 \end{enumerate}
 endsnippet
@@ -208,6 +208,10 @@ endsnippet
 # MATH #
 ########
 
+snippet log "Logarithm" i
+\log{$1}$0 
+endsnippet 
+
 snippet binom "Binomial N choose R"
 \binom{$1}{$2}$0
 endsnippet 
@@ -220,8 +224,8 @@ snippet pr "Prime" i
 ^{\prime}
 endsnippet
 
-snippet 2pr "2 Prime"
-^{\prime}
+snippet 2pr "2 Prime" i
+^{\prime \prime}
 endsnippet
 
 snippet eul "Euler" i
@@ -473,7 +477,7 @@ snippet xx "cross" Aw
 \times 
 endsnippet
 
-snippet '(?<!\\)(sin|cos|tan|arccot|cot|csc|ln|log|exp|star|perp)' "ln" rw
+snippet '(?<!\\)(sin|cos|tan|arccot|cot|csc|ln|exp|star|perp)' "ln" rw
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
