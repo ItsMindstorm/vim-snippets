@@ -340,6 +340,15 @@ snippet it "Italic" wi
 \textit{${1:${VISUAL}}}$0
 endsnippet
 
+snippet code "Minted block" wi 
+\begin{listings}[H]
+	\begin{minted}{${1:${VISUAL}}}
+	$0
+	\end{minted}
+	\caption{$2}
+\end{listings}
+endsnippet
+
 snippet un "Underline" wi
 \textun{${1:${VISUAL}}}$0
 endsnippet
